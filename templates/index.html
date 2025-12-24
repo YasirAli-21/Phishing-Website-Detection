@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing website detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0F172A; color: #F8FAFC; scroll-behavior: smooth; }
+        .glass-card { 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { border-color: #38BDF8; }
+        .cyber-gradient { background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%); }
+        /* Custom Scrollbar for the History Log */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <nav class="w-64 bg-slate-900 border-r border-slate-800 p-6 hidden md:block fixed h-full z-50">
+        <div class="flex items-center gap-3 mb-10">
+            <div class="p-2 cyber-gradient rounded-lg"><i class="fas fa-shield-alt text-white"></i></div>
+            <h1 class="text-xl font-bold tracking-tight uppercase text-white">YSentry</h1>
+        </div>
+        <div class="space-y-2">
+            <a href="#detect" class="flex items-center gap-3 p-3 rounded-lg bg-slate-800 text-sky-400 border border-sky-400/20 transition"><i class="fas fa-search"></i> Detection</a>
+            <a href="#model" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition"><i class="fas fa-chart-line"></i> Model Status</a>
+            <a href="#deploy" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition"><i class="fas fa-rocket"></i> Deploy</a>
+            <a href="#history" class="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition"><i class="fas fa-history"></i> Log History</a>
+        </div>
+    </nav>
+
+    <main class="flex-1 md:ml-64 p-4 md:p-10 flex flex-col min-h-screen max-w-7xl mx-auto w-full">
+        
+        <div class="flex-grow">
+            <header class="mb-10">
+                <h2 class="text-3xl font-bold">Phishing website detection</h2>
+                <p class="text-slate-400 mt-1 italic font-light tracking-wide">Enterprise-grade URL verification by YSentry Security Engine</p>
+            </header>
+
+            <div id="detect" class="glass-card rounded-2xl p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-6 flex items-center gap-2 text-slate-100">
+                    <i class="fas fa-crosshairs text-sky-400"></i> Start New Analysis
+                </h3>
+                <form method="POST" class="space-y-4">
+                    <input type="text" name="url" placeholder="Enter URL to verify..." required
+                        class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-6 py-4 outline-none focus:border-sky-500 transition text-lg text-white">
+                    <button type="submit" class="cyber-gradient w-full py-4 rounded-xl font-bold text-slate-900 hover:opacity-90 transition transform hover:scale-[1.005] uppercase tracking-wider">
+                        RUN YSENTRY SCAN
+                    </button>
+                </form>
+
+                {% if prediction_text %}
+                <div class="mt-8 p-6 rounded-xl border flex items-center justify-between {% if prediction_class == 'phishing' %} bg-red-500/10 border-red-500/50 text-red-400 {% else %} bg-emerald-500/10 border-emerald-500/50 text-emerald-400 {% endif %}">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60 mb-1">System Verdict</p>
+                        <h4 class="text-2xl font-bold tracking-tight uppercase">{{ prediction_text }}</h4>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <div id="model" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-slate-500 text-xs mb-1 uppercase tracking-widest font-bold">Accuracy</p>
+                    <h4 class="text-4xl font-black text-sky-400">96.4%</h4>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-slate-500 text-xs mb-1 uppercase tracking-widest font-bold">Algorithm</p>
+                    <h4 class="text-lg font-bold text-slate-200">Multinomial Naive Bayes</h4>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-slate-500 text-xs mb-1 uppercase tracking-widest font-bold">Dataset Size</p>
+                    <h4 class="text-lg font-bold text-slate-200">21,000+ URLs</h4>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div id="deploy" class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fas fa-rocket text-sky-400"></i> Deploy</h3>
+                    <p class="text-sm text-slate-400 mb-6">Cloud instance ready for Vercel, Heroku, or Docker deployment.</p>
+                    <div class="flex gap-3">
+                        <button class="flex-1 py-2 bg-slate-800 rounded-lg text-xs font-bold hover:bg-slate-700 transition border border-slate-700 uppercase">View API</button>
+                        <button class="flex-1 py-2 bg-sky-600/20 text-sky-400 rounded-lg text-xs font-bold hover:bg-sky-600/30 transition border border-sky-500/30 uppercase">Push Production</button>
+                    </div>
+                </div>
+
+                <div id="history" class="glass-card rounded-2xl p-6">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-history text-slate-400"></i> Activity Log (Last 21)
+                    </h3>
+                    <div class="max-h-40 overflow-y-auto space-y-2 pr-2">
+                        {% if history %}
+                            {% for item in history %}
+                            <div class="flex justify-between items-center p-3 bg-slate-900/60 rounded border border-slate-800/50">
+                                <span class="text-[11px] truncate max-w-[150px] text-slate-400 font-mono">{{ item.url }}</span>
+                                <span class="text-[10px] font-bold uppercase tracking-tighter {% if item.result == 'Phishing' %} text-red-500 {% else %} text-emerald-500 {% endif %}">
+                                    {{ item.result }}
+                                </span>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-slate-600 text-xs italic">No scan data currently available.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-auto py-8 border-t border-slate-800/50 text-center">
+            <p class="text-slate-500 text-sm tracking-wide">
+                © 2025 <span class="text-sky-500 font-bold">YSentry</span> | Developed by <span class="text-slate-300 font-semibold">Yasir Ali</span>
+            </p>
+        </footer>
+    </main>
+
+</body>
+</html>
