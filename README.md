@@ -22,6 +22,7 @@ An Intelligent Machine Learning solution to identify and classify malicious URLs
 * **Framework:** Streamlit 🖥️
 * **Language:** Python 🐍
 * **ML Libraries:** Scikit-learn, Pandas, NumPy 🧪
+* **Development:** Jupyter Notebook 📓 (For Data Analysis & Model Training)
 
 ## 📋 Installation & Setup
 
