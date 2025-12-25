@@ -2,7 +2,7 @@
 
 An Intelligent Machine Learning solution to identify and classify malicious URLs. This project uses advanced classification algorithms to distinguish between legitimate and phishing websites, helping users stay safe online.
 
-![App Dashboard](dashboard.png)
+<img src="dashboard.png" alt="App Dashboard" width="100%">
 
 ## 📌 Table of Contents
 * [🚀 Features](#features)
