@@ -9,6 +9,7 @@ An Intelligent Machine Learning solution to identify and classify malicious URLs
 * [📊 Model Performance](#performance)
 * [🛠️ Tech Stack](#tech-stack)
 * [📋 Installation & Setup](#setup)
+* [👤 Author](#author)
 
 ---
 
