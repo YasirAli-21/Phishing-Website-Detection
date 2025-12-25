@@ -19,7 +19,7 @@ An Intelligent Machine Learning solution to identify and classify malicious URLs
 * **Detection Engine:** Powered by the *YSentry Security Engine* 🛡️.
 * **Lexical Analysis:** Scans URL structures for malicious patterns 🔍.
 * **SSL Verification:** Checks the security certificates of the domain 🔐.
-* **Recent Activity:** Tracks the last **21** ⚡ scans for quick reference.
+* **Recent Activity:** Tracks the last **21** ⚡ scans for quick reference in the Activity Log.
 * **Enterprise-grade Verification:** Optimized for high-speed URL analysis.
 
 ## <a name="performance"></a>📊 Model Performance
