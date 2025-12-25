@@ -3,7 +3,7 @@
 An Intelligent Machine Learning solution to identify and classify malicious URLs. This project uses advanced classification algorithms to distinguish between legitimate and phishing websites, helping users stay safe online.
 
 <p align="center">
-  <img src="Dashboard.png" alt="App Dashboard" width="100%">
+  <img src="dashboard.png" alt="App Dashboard" width="100%">
 </p>
 
 ## 📌 Table of Contents
@@ -29,12 +29,14 @@ An Intelligent Machine Learning solution to identify and classify malicious URLs
 * **Status:** Operational and Optimized 🚀
 
 ## <a name="tech-stack"></a>🛠️ Tech Stack
-* **Framework:** Flask 🖥️
+* **Framework:** Streamlit / Flask 🖥️
 * **Language:** Python 🐍
 * **ML Libraries:** Scikit-learn, Pandas, NumPy 🧪
-* **Development:** Jupyter Notebook 📓
+* **Development:** Jupyter Notebook 📓 (Data Analysis & Training)
 
 ## <a name="setup"></a>📋 Installation & Setup
+
+Follow these steps to get the project running locally:
 
 1. **Clone the repository**
    ```bash
