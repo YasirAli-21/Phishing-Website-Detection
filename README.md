@@ -118,9 +118,7 @@ Achieved a verified **96.4% Accuracy** rate on 21,000+ samples.
 ---
 
 ## 👨‍💻 Author <a name="author"></a>
-**Yasir Ali** | IT Enthusiast | © 2025 YSENTRY
-
-I am a developer passionate about bridging the gap between AI and Cybersecurity.
+**Yasir Ali** | IT Enthusiast | © 2025 YSENTRY.
 
 [![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YasirAli-21)
 [![linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yasisahito)
