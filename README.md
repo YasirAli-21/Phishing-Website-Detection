@@ -28,7 +28,7 @@ Digital security is a growing concern as phishing attacks become more sophistica
 
 ---
 
-## 🎯 Problem Statement <a name="problem-statement"></a>
+## 🎯 [Problem Statement](#problem-statement) <a name="problem-statement"></a>
 Phishing attacks are increasing every year, and most users lack the technical knowledge to identify fake websites. Traditional solutions fail to detect newly created phishing URLs. **YSENTRY** addresses this by using Machine Learning to classify URLs based on their structural characteristics.
 
 ---
@@ -38,7 +38,7 @@ Follow these steps to run YSENTRY locally:
 
 ### Step 1: Clone the Repository
 Open your terminal and use the following command to download the project:
-`git clone https://github.com/YasirAli21-cmd/YSentry.git`
+`git clone https://github.com/YasirAli-21/YSentry.git`
 
 ### Step 2: Navigate to the Project Directory
 Enter the project folder:
@@ -118,7 +118,7 @@ Achieved a verified **96.4% Accuracy** rate on 21,000+ samples.
 ---
 
 ## 👨‍💻 Author <a name="author"></a>
-**Yasir Ali** | IT Enthusiast | © 2025 YSENTRY.
+**Yasir Ali** | IT Enthusiast | © 2025 YSENTRY
 
 [![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YasirAli-21)
 [![linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yasisahito)
