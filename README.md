@@ -1,5 +1,7 @@
 # 🛡️ YSENTRY – Phishing Website Detection System
 
+![CI](https://github.com/YasirAli-21/Phishing-Website-Detection/actions/workflows/python-ci.yml/badge.svg?branch=master)
+
 **Empowering Digital Safety through Intelligent Machine Learning Analysis**
 
 ---
