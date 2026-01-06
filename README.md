@@ -1,172 +1,162 @@
-🛡️ YSENTRY – Phishing Website Detection System
+# 🛡️ YSENTRY – Phishing Website Detection System
 
-Empowering Digital Safety through Intelligent Machine Learning Analysis
+![CI](https://github.com/YasirAli-21/Phishing-Website-Detection/actions/workflows/python-ci.yml/badge.svg?branch=master)
 
-📚 Table of Contents
+**Empowering Digital Safety through Intelligent Machine Learning Analysis**
 
-🌟 Overview
+---
 
-🎯 Problem Statement
+## 📚 Table of Contents
+- Overview
+- Problem Statement
+- Getting Started
+- Tech Stack & Libraries
+- Project Execution
+- Model Logic & Technical Details
+- System Architecture (Text-based)
+- System Workflow
+- System Features
+- Future Enhancements
+- Author
 
-🚀 Getting Started
+---
 
+## 🌟 Overview
+Phishing attacks are increasing rapidly and pose a serious threat to digital security.  
+**YSENTRY** is a Machine Learning–based system designed to detect phishing websites by analyzing URL patterns and structural characteristics.
+
+Key highlights:
+- Machine Learning–based URL classification
+- Simple and user-friendly Flask interface
+- Fast and lightweight prediction system
+- Scan history tracking (last 21 URLs)
+
+---
+
+## 🎯 Problem Statement
+Most internet users are unable to identify phishing websites due to their realistic appearance.  
+Traditional rule-based systems often fail to detect newly created phishing URLs.
+
+**YSENTRY** addresses this problem by using Machine Learning to classify URLs as **Safe** or **Phishing** based on extracted features.
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+```bash
+git clone https://github.com/YasirAli-21/Phishing-Website-Detection.git
+Navigate to Project Directory
+bash
+Copy code
+cd Phishing-Website-Detection
+Create Virtual Environment
+bash
+Copy code
+python -m venv .venv
+Activate Environment (Windows)
+bash
+Copy code
+.\.venv\Scripts\activate
+Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
 🛠️ Tech Stack & Libraries
+Python – Core programming language
+
+Flask – Web framework
+
+Scikit-learn – Machine Learning model
+
+Pandas & NumPy – Data processing
+
+HTML/CSS – Frontend interface
 
 💻 Project Execution
+Run the application using:
 
-🧠 Model Logic & Technical Details
-
-🏗️ System Architecture (Text-based)
-
-⚙️ System Workflow
-
-📊 System Features
-
-✨ Future Enhancements
-
-👨‍💻 Author
-
-🌟 Overview <a name="overview"></a>
-
-Digital security is a growing concern as phishing attacks become more sophisticated. YSENTRY is a specialized tool designed to detect malicious URLs before they can cause harm.
-
-Intelligent Analysis: Uses Machine Learning to understand structural patterns of a URL.
-
-User-Centric Design: Built with a clean Flask interface for non-technical users.
-
-Speed & Reliability: Provides results in milliseconds.
-
-Activity Intelligence: Tracks the last 21 ⚡ scans for history tracking.
-
-🎯 Problem Statement <a name="problem-statement"></a>
-
-Phishing attacks are increasing every year, and most users lack the technical knowledge to identify fake websites. Traditional solutions fail to detect newly created phishing URLs. YSENTRY addresses this by using Machine Learning to classify URLs based on their structural characteristics.
-
-🚀 Getting Started <a name="getting-started"></a>
-Step 1: Clone the Repository
-git clone https://github.com/YasirAli-21/YSentry.git
-
-Step 2: Navigate to the Project Directory
-cd YSentry
-
-Step 3: Setup Environment
-python -m venv .venv
-.\.venv\Scripts\activate
-
-Step 4: Install Dependencies
-pip install -r requirements.txt
-
-🛠️ Tech Stack & Libraries <a name="tech-stack--libraries"></a>
-
-🐍 Python 3.13+
-
-🔥 Flask
-
-📊 Scikit-learn (Multinomial Naive Bayes)
-
-🧪 Pandas & NumPy
-
-🌐 Requests
-
-💻 Project Execution <a name="project-execution"></a>
+bash
+Copy code
 python app.py
+Open your browser and visit:
 
-
-Visit:
-
+cpp
+Copy code
 http://127.0.0.1:5000
+🧠 Model Logic & Technical Details
+Machine Learning Algorithm
+The system uses Multinomial Naive Bayes, which is efficient for text-based classification problems.
 
-🧠 Model Logic & Technical Details <a name="model-logic--technical-details"></a>
-🔹 Machine Learning Algorithm
-
-Multinomial Naive Bayes (MNB) is used due to its efficiency in text-based classification problems.
-
-🔹 Feature Engineering
-
-Lexical analysis of:
-
+Feature Engineering
 URL length
 
 Special characters
 
-Token frequency
+Lexical patterns
 
-🔹 Vectorization
+Vectorization
+URLs are converted into numerical features using a trained vectorizer.pkl.
 
-URLs are converted into numerical form using a trained vectorizer.pkl.
+Dataset & Accuracy
+Dataset size: 21,000+ URLs
 
-🔹 Dataset & Accuracy
+Achieved accuracy: 96.4%
 
-21,000+ samples
-
-96.4% accuracy
-
-🏗️ System Architecture (Text-based) <a name="system-architecture-text-based"></a>
-
-The system follows a clean and modular pipeline-based architecture:
-
+🏗️ System Architecture (Text-based)
 User
- ↓
-Web Interface (HTML / Flask UI)
- ↓
-Flask Backend API
- ↓
-Feature Extraction & Preprocessing
- ↓
-Machine Learning Model (Scikit-learn)
- ↓
-Prediction Result (Safe / Phishing)
+→ Web Interface (HTML / Flask UI)
+→ Flask Backend
+→ Feature Extraction & Preprocessing
+→ Machine Learning Model (Scikit-learn)
+→ Prediction Result (Safe / Phishing)
 
-Component Breakdown:
+Components
+Frontend: HTML/CSS (Flask templates)
 
-Frontend: HTML/CSS rendered via Flask templates
+Backend: Flask (Python)
 
-Backend: Flask REST-based processing
+ML Model: Multinomial Naive Bayes
 
-ML Model: Trained Naive Bayes classifier
+Output: Binary classification
 
-Output: Binary classification (Legitimate / Phishing)
-
-⚙️ System Workflow <a name="system-workflow"></a>
-
+⚙️ System Workflow
 User enters a URL through the web interface.
 
 Flask backend receives the request.
 
 URL features are extracted and preprocessed.
 
-The trained ML model classifies the URL.
+The trained ML model performs classification.
 
 Result is displayed to the user.
 
-Scan history is saved (last 21 entries).
+Scan result is saved in history (last 21 scans).
 
-📊 System Features <a name="system-features"></a>
+📊 System Features
+Real-time phishing detection
 
-🔍 Real-time phishing detection
+Machine Learning–based analysis
 
-📊 Scan history tracking
+Scan history tracking
 
-🧠 ML-based classification
+Fast and lightweight processing
 
-⚡ Fast response time
+Simple and clean UI
 
-🔐 Secure processing
+✨ Future Enhancements
+Browser extension (Chrome / Edge)
 
-✨ Future Enhancements <a name="future-enhancements"></a>
+Deep Learning models (LSTM, Transformers)
 
-🌐 Browser Extension (Chrome / Edge)
+Mobile API integration
 
-🤖 Deep Learning (LSTM / Transformers)
+Live threat intelligence feeds
 
-📱 Mobile API integration
-
-🛡️ Live threat intelligence feeds
-
-👨‍💻 Author <a name="author"></a>
-
+👨‍💻 Author
 Yasir Ali
-IT Enthusiast | Final Year BS(IT)
-© 2025 YSENTRY
+Final Year BS(IT) Student
+© 2025 – YSENTRY
 
-
+GitHub: https://github.com/YasirAli-21
+LinkedIn: https://www.linkedin.com/in/yasisahito
