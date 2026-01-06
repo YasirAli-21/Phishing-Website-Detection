@@ -13,8 +13,10 @@
 - 🛠️ [Tech Stack & Libraries](#tech-stack--libraries)
 - 💻 [Project Execution](#project-execution)
 - 🧠 [Model Logic & Technical Details](#model-logic--technical-details)
+- 🏗️ [System Architecture (Text-based)](#system-architecture-text-based)
 - ⚙️ [System Workflow](#system-workflow)
 - 📊 [System Features](#system-features)
+- 🔄 [CI/CD Pipeline](#cicd-pipeline)
 - ✨ [Future Enhancements](#future-enhancements)
 - 👨‍💻 [Author](#author)
 
@@ -78,6 +80,25 @@ Run the Flask application using the following command in your terminal:
 ## 🧠 Model Logic & Technical Details <a name="model-logic--technical-details"></a>
 The "Brain" of YSENTRY is based on high-performance text classification logic.
 
+---
+
+## 🏗️ System Architecture (Text-based) <a name="system-architecture-text-bases"></a>
+
+User  
+→ Web Interface (HTML / Flask UI)  
+→ Flask Backend API  
+→ Feature Extraction & Preprocessing  
+→ Machine Learning Model (Scikit-learn)  
+→ Prediction Result (Safe / Phishing)
+
+### Components
+- Frontend: HTML/CSS (Flask Templates)
+- Backend: Flask (Python)
+- ML Model: Multinomial Naive Bayes (Scikit-learn)
+- Vectorizer: Pre-trained `vectorizer.pkl`
+- Output: Safe / Phishing classification
+
+
 
 
 ### 🔹 Machine Learning Algorithm
@@ -110,6 +131,30 @@ Achieved a verified **96.4% Accuracy** rate on 21,000+ samples.
 * ⚡ Fast and lightweight prediction engine.
 
 ---
+
+## 🔄 CI/CD Pipeline <a cicd-pipeline"></a>
+
+This project uses **GitHub Actions** to ensure code quality and stability through an automated Continuous Integration pipeline.
+
+### CI Workflow Overview
+- Automatically triggered on every **push** and **pull request** to the `master` branch
+- Sets up a clean Python environment
+- Installs all required dependencies from `requirements.txt`
+- Verifies that the project builds correctly without errors
+
+### Benefits
+- Ensures code reliability on every update
+- Detects dependency or environment issues early
+- Improves project credibility and maintainability
+- Provides instant feedback through CI status badges
+
+### Tools Used
+- **GitHub Actions**
+- **Python**
+- **pip**
+
+The CI status badge displayed at the top of this repository reflects the current health of the codebase.
+
 
 ## ✨ Future Enhancements <a name="future-enhancements"></a>
 * 🌐 Browser extension (Chrome / Edge) for real-time protection.
