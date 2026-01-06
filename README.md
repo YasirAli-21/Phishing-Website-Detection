@@ -195,4 +195,4 @@ The CI status badge displayed at the top of this repository reflects the current
 **Yasir Ali** | IT Enthusiast | © 2025 YSENTRY
 
 [![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YasirAli-21)
-[![linkedin](https://www.linkedin.com/in/yasir-sahito-b714b0313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+[![linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yasir-sahito-b714b0313?)
