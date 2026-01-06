@@ -132,7 +132,7 @@ Achieved a verified **96.4% Accuracy** rate on 21,000+ samples.
 
 ---
 
-## 🔄 CI/CD Pipeline <a "cicd-pipeline"></a>
+## 🔄 CI/CD Pipeline <a name="cicd-pipeline"></a>
 
 This project uses **GitHub Actions** to ensure code quality and stability through an automated Continuous Integration pipeline.
 
