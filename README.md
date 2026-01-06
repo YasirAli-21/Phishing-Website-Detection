@@ -16,6 +16,7 @@
 - 🏗️ [System Architecture (Text-based)](#system-architecture-text-based)
 - ⚙️ [System Workflow](#system-workflow)
 - 📊 [System Features](#system-features)
+- 🧪 [Dataset & Model Performance](#dataset--model-performance)
 - 🔄 [CI/CD Pipeline](#cicd-pipeline)
 - ✨ [Future Enhancements](#future-enhancements)
 - 👨‍💻 [Author](#author)
@@ -131,6 +132,32 @@ Achieved a verified **96.4% Accuracy** rate on 21,000+ samples.
 * ⚡ Fast and lightweight prediction engine.
 
 ---
+
+## 🧪 Dataset & Model Performance <a name="dataset--model-performance"></a>
+
+### Dataset Overview
+- Total samples: **21,000+ URLs**
+- Data type: Labeled URLs (Legitimate / Phishing)
+- Dataset includes a balanced mix of real-world phishing and safe websites
+- Preprocessing applied to remove noise and irrelevant patterns
+
+### Data Preparation
+- URLs cleaned and normalized
+- Feature extraction based on lexical characteristics
+- Conversion of raw URLs into numerical vectors using a trained vectorizer
+
+### Model Performance
+- Algorithm used: **Multinomial Naive Bayes**
+- Evaluation metric: **Accuracy**
+- Achieved accuracy: **96.4%**
+
+### Model Validation
+- Data split into training and testing sets
+- Model evaluated on unseen test data to ensure generalization
+- Consistent performance observed across multiple test runs
+
+---
+
 
 ## 🔄 CI/CD Pipeline <a name="cicd-pipeline"></a>
 
